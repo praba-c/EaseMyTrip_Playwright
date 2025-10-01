@@ -1,0 +1,247 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "validate-activities-functionalities;verify-activity-scenarios",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Verify Activity Scenarios",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1238058000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "user opens application",
+            "match": {
+              "location": "steps\\HomeSteps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5065640599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "verify home page is displayed",
+            "match": {
+              "location": "steps\\HomeSteps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 130062500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "user clicks on the activities tab",
+            "match": {
+              "location": "steps\\HomeSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 300828999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "verify activities page is displayed",
+            "match": {
+              "location": "steps\\ActivitiesSteps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11510100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "user selects the \"activity.location\"",
+            "match": {
+              "location": "steps\\ActivitiesSteps.ts:11"
+            },
+            "result": {
+              "status": "pending",
+              "duration": 12099600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "verify activities related to the location where displayed",
+            "match": {
+              "location": "steps\\ActivitiesSteps.ts:16"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "apply filter \"duration.input\" and \"special.input\"",
+            "match": {
+              "location": "steps\\ActivitiesSteps.ts:21"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "user clicks on book now button on a package that contains \"keyword\"",
+            "match": {
+              "location": "steps\\ActivitiesSteps.ts:26"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "verify activity details page is displayed",
+            "match": {
+              "location": "steps\\ActivityDetailsSteps.ts:3"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "user selects the \"activity.date\", \"traveller.count\" and click on book now button",
+            "match": {
+              "location": "steps\\ActivityDetailsSteps.ts:8"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "verify user is on user information page",
+            "match": {
+              "location": "steps\\ActivitiesUserInfoSteps.ts:3"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "prefix",
+                      "firstName",
+                      "lastName"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Mr.",
+                      "Steve",
+                      "Smith"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Mr.",
+                      "Dwayne",
+                      "Johnson"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Mr.",
+                      "Nathan",
+                      "Lyon"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 19,
+            "name": "user fills the details:",
+            "match": {
+              "location": "steps\\ActivitiesUserInfoSteps.ts:8"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "other details \"mobile.input\", \"email.input\", \"panName.input\" and \"panNumber.input\"",
+            "match": {
+              "location": "steps\\ActivitiesUserInfoSteps.ts:13"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "print the price details",
+            "match": {
+              "location": "steps\\ActivitiesUserInfoSteps.ts:18"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "validate-activities-functionalities",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Validate Activities Functionalities",
+    "tags": [],
+    "uri": "features\\Activities.feature"
+  }
+]
