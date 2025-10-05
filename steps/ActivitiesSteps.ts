@@ -1,12 +1,13 @@
-import { When, Then } from "@cucumber/cucumber";
+import { When, Then, setDefaultTimeout } from "@cucumber/cucumber";
 import { CustomWorld } from "../support/World";
 import { ActivitiesPage } from "../pages/ActivitiesPage";
 import { expect } from "playwright/test";
 
+setDefaultTimeout(60000);
 
 Then('verify activities page is displayed', async function (this: CustomWorld) {
-    this.activitiesPage = new ActivitiesPage(this.page);
-    await this.activitiesPage.isActivitiesPageDisplayed();
+    this.activitiesPage = new ActivitiesPage(this.page, this.context);
+    expect(await this.activitiesPage.isActivitiesPageDisplayed()).toBeTruthy();
 });
 
 When('user selects the {string}', async function (this: CustomWorld, location: string) {
@@ -23,4 +24,5 @@ Then('apply filter {string} and {string}', async function (this: CustomWorld, du
 
 When('user clicks on book now button on a package that contains {string}', async function (this: CustomWorld, keyword: string) {
     await this.activitiesPage.selectActivity(keyword);
+    this.page = this.activitiesPage.page;
 });

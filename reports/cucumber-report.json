@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1238058000
+              "duration": 993298400
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5065640599
+              "duration": 5135544799
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 130062500
+              "duration": 138043099
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 300828999
+              "duration": 3776602399
             }
           },
           {
@@ -62,24 +62,24 @@
             "line": 8,
             "name": "verify activities page is displayed",
             "match": {
-              "location": "steps\\ActivitiesSteps.ts:6"
+              "location": "steps\\ActivitiesSteps.ts:8"
             },
             "result": {
               "status": "passed",
-              "duration": 11510100
+              "duration": 434298399
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 9,
-            "name": "user selects the \"activity.location\"",
+            "name": "user selects the \"Mumbai\"",
             "match": {
-              "location": "steps\\ActivitiesSteps.ts:11"
+              "location": "steps\\ActivitiesSteps.ts:13"
             },
             "result": {
-              "status": "pending",
-              "duration": 12099600
+              "status": "passed",
+              "duration": 14698399
             }
           },
           {
@@ -88,37 +88,37 @@
             "line": 10,
             "name": "verify activities related to the location where displayed",
             "match": {
-              "location": "steps\\ActivitiesSteps.ts:16"
+              "location": "steps\\ActivitiesSteps.ts:17"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 76566600
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 14,
-            "name": "apply filter \"duration.input\" and \"special.input\"",
+            "name": "apply filter \"1 to 4 hours\" and \"Private Tour\"",
             "match": {
               "location": "steps\\ActivitiesSteps.ts:21"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 5093458299
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 15,
-            "name": "user clicks on book now button on a package that contains \"keyword\"",
+            "name": "user clicks on book now button on a package that contains \"The Colourful Early Morning Tour\"",
             "match": {
-              "location": "steps\\ActivitiesSteps.ts:26"
+              "location": "steps\\ActivitiesSteps.ts:25"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 13906399
             }
           },
           {
@@ -127,109 +127,24 @@
             "line": 16,
             "name": "verify activity details page is displayed",
             "match": {
-              "location": "steps\\ActivityDetailsSteps.ts:3"
+              "location": "steps\\ActivityDetailsSteps.ts:8"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 10454799
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 17,
-            "name": "user selects the \"activity.date\", \"traveller.count\" and click on book now button",
+            "name": "user selects the \"7\", \"3\" and click on book now button",
             "match": {
-              "location": "steps\\ActivityDetailsSteps.ts:8"
+              "location": "steps\\ActivityDetailsSteps.ts:13"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 18,
-            "name": "verify user is on user information page",
-            "match": {
-              "location": "steps\\ActivitiesUserInfoSteps.ts:3"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "prefix",
-                      "firstName",
-                      "lastName"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "Mr.",
-                      "Steve",
-                      "Smith"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "Mr.",
-                      "Dwayne",
-                      "Johnson"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "Mr.",
-                      "Nathan",
-                      "Lyon"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "keyword": "When ",
-            "line": 19,
-            "name": "user fills the details:",
-            "match": {
-              "location": "steps\\ActivitiesUserInfoSteps.ts:8"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 24,
-            "name": "other details \"mobile.input\", \"email.input\", \"panName.input\" and \"panNumber.input\"",
-            "match": {
-              "location": "steps\\ActivitiesUserInfoSteps.ts:13"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 25,
-            "name": "print the price details",
-            "match": {
-              "location": "steps\\ActivitiesUserInfoSteps.ts:18"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 18615600
             }
           }
         ],

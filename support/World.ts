@@ -2,6 +2,8 @@ import { Before, setWorldConstructor } from "@cucumber/cucumber";
 import { Browser, BrowserContext, chromium, Page } from "playwright"; 
 import { HomePage } from "../pages/HomePage";
 import { ActivitiesPage } from "../pages/ActivitiesPage";
+import { ActivityDetailsPage } from "../pages/ActivityDetailsPage";
+import { ActivityTravellerInfoPage } from "../pages/ActivityTravellerInfoPage";
 
 export class CustomWorld {
     browser!: Browser;
@@ -9,6 +11,8 @@ export class CustomWorld {
     page!: Page;
     homePage!: HomePage;
     activitiesPage!: ActivitiesPage;
+    activityDetailsPage!: ActivityDetailsPage;
+    activityTravellerInfoPage!: ActivityTravellerInfoPage;
 
     async init() {
         this.browser = await chromium.launch({headless: false});
@@ -16,6 +20,8 @@ export class CustomWorld {
             permissions: []
         });
         this.page = await this.context.newPage();
+        
+        this.homePage = new HomePage(this.page);
     }
 
 }

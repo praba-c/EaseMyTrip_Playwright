@@ -5,7 +5,7 @@ module.exports = {
       'support/World.ts'
     ],
 
-    format: ['progress', 'json:reports/cucumber-report.json'],
+    format: ['progress', 'html:reports/cucumber-report.html'],
     paths: ['features/*.feature'],
     requireModule: ['ts-node/register'],
     parallel: 1,

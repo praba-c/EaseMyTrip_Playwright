@@ -1,12 +1,10 @@
 import { Given, When, Then, setDefaultTimeout } from "@cucumber/cucumber";
-import { HomePage } from "../pages/HomePage";
 import { CustomWorld } from "../support/World";
 import {expect} from "@playwright/test";
 
 setDefaultTimeout(60000);
 
 Given('user opens application', async function (this: CustomWorld) {
-    this.homePage = new HomePage(this.page);
     await this.homePage.openApplication();
 });
 

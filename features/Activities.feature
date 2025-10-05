@@ -11,17 +11,16 @@ Feature: Validate Activities Functionalities
 
   Scenario: Verify Activity Scenarios
 
-    And apply filter "duration.input" and "special.input"
-    When user clicks on book now button on a package that contains "keyword"
+    And apply filter "1 to 4 hours" and "Private Tour"
+    When user clicks on book now button on a package that contains "The Colourful Early Morning Tour"
     Then verify activity details page is displayed
-    When user selects the "activity.date", "traveller.count" and click on book now button
+    When user selects the "7", "3" and click on book now button
     Then verify user is on user information page
     When user fills the details:
       | prefix | firstName | lastName |
       | Mr.    | Steve     | Smith    |
       | Mr.    | Dwayne    | Johnson  |
       | Mr.    | Nathan    | Lyon     |
-    And other details "mobile.input", "email.input", "panName.input" and "panNumber.input"
     Then print the price details
 
 #
