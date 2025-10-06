@@ -63,7 +63,7 @@ export class ActivitiesPage {
         }
     }
 
-    async selectActivity(keyword: string): Promise<void> {
+    async selectActivity(keyword: string) {
         for (let i = 0; i < await this.activities.count(); ++i) {
             const name = await this.activities.nth(i).textContent() || "";
             if (keyword === name.toString().trim()) {

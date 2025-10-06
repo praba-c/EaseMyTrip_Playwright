@@ -9,7 +9,9 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.55.1",
-    "@types/node": "^24.6.1"
+    "@types/node": "^24.6.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "@cucumber/cucumber": "^11.3.0"
