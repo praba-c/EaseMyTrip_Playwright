@@ -1,4 +1,4 @@
-import { Before, setWorldConstructor } from "@cucumber/cucumber";
+import { After, Before, setWorldConstructor } from "@cucumber/cucumber";
 import { Browser, BrowserContext, chromium, Page } from "playwright"; 
 import { HomePage } from "../pages/HomePage";
 import { ActivitiesPage } from "../pages/ActivitiesPage";
@@ -31,3 +31,7 @@ setWorldConstructor(CustomWorld);
 Before(async function (this: CustomWorld) {
   await this.init();
 });
+
+After(async function (this: CustomWorld) {
+    await this.browser.close();
+})

@@ -45,6 +45,6 @@ export class ActivityTravellerInfoPage {
     }
 
     async printPriceDetails() {
-        console.log(this.priceDetails.textContent());
+        //console.log(this.priceDetails.textContent());
     }
 }

@@ -10,6 +10,8 @@ export class ActivitiesPage {
     specialOptions: Locator;
     activities: Locator;
     context: any;
+    sortOptions: Locator;
+    price: Locator;
 
     constructor(page: Page, context: BrowserContext) {
         this.page = page;
@@ -20,6 +22,8 @@ export class ActivitiesPage {
         this.durationOptions = page.locator('#duration label');
         this.specialOptions = page.locator('#vspecial span');
         this.activities = page.locator('._cityname');
+        this.sortOptions = page.locator('#srt_slct li');
+        this.price = page.locator('._P_Price');
     }
 
     async isActivitiesPageDisplayed(): Promise<any> {
@@ -76,5 +80,45 @@ export class ActivitiesPage {
                 return;
             }
         }
+    }
+
+    async sort(option: string) {
+        for (let i = 0; i < await this.sortOptions.count(); ++i) {
+            
+            const value = await this.sortOptions.nth(i).textContent() || "";
+            if (value.toString().includes(option)) {
+                await this.sortOptions.nth(i).click();
+                break;
+            }
+        }
+    }
+
+    async validateSort(option: string) {
+        if (option === 'Low to High') {
+            for (let i = 1; i < 20; ++i) {
+                const currvalue = await this.price.nth(i).textContent() || "";
+                const currPriceValue = currvalue.toString().substring(2);
+
+                const prevValue = await this.price.nth(i - 1).textContent() || "";
+                const prevPriceValue = prevValue.toString().substring(2);
+
+                if (Number(prevPriceValue) > Number(currPriceValue)) {
+                    return false;
+                }
+            }
+        } else {
+            for (let i = 1; i < 20; ++i) {
+                const currvalue = await this.price.nth(i).textContent() || "";
+                const currPriceValue = currvalue.toString().substring(2);
+
+                const prevValue = await this.price.nth(i - 1).textContent() || "";
+                const prevPriceValue = prevValue.toString().substring(2);
+
+                if (Number(prevPriceValue) < Number(currPriceValue)) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }

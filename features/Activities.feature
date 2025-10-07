@@ -14,7 +14,7 @@ Feature: Validate Activities Functionalities
     And apply filter "1 to 4 hours" and "Private Tour"
     When user clicks on book now button on a package that contains "The Colourful Early Morning Tour"
     Then verify activity details page is displayed
-    When user selects the "7", "3" and click on book now button
+    When user selects the "10", "3" and click on book now button
     Then verify user is on user information page
     When user fills the details:
       | prefix | firstName | lastName |
@@ -23,12 +23,11 @@ Feature: Validate Activities Functionalities
       | Mr.    | Nathan    | Lyon     |
     Then print the price details
 
-#
-#  Scenario Outline: Verify user can sort activity packages by price
-#    And sort the suggestions by "<sortOrder>"
-#    Then verify suggestions are sorted based on "<sortOrder>"
-#
-#    Examples:
-#      | sortOrder   |
-#      | Low to High |
-#      | High to Low |
+  Scenario Outline: Verify user can sort activity packages by price
+    And sort the suggestions by "<sortOrder>"
+    Then verify suggestions are sorted based on "<sortOrder>"
+
+    Examples:
+      | sortOrder   |
+      | Low to High |
+      | High to Low |
